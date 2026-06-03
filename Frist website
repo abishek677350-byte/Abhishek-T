@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhishek | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050816;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Animated Background */
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    background:linear-gradient(
+        -45deg,
+        #00d4ff,
+        #7c3aed,
+        #2563eb,
+        #06b6d4
+    );
+    background-size:400% 400%;
+    animation:gradient 12s ease infinite;
+    opacity:.15;
+    z-index:-2;
+}
+
+@keyframes gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Floating particles */
+.particle{
+    position:fixed;
+    border-radius:50%;
+    background:white;
+    opacity:.15;
+    animation:float linear infinite;
+    z-index:-1;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-100px);
+    }
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.glow{
+    font-size:5rem;
+    font-weight:700;
+    background:linear-gradient(90deg,#00d4ff,#7c3aed,#00d4ff);
+    background-size:200%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:shine 4s linear infinite;
+}
+
+@keyframes shine{
+    0%{background-position:0%;}
+    100%{background-position:200%;}
+}
+
+.subtitle{
+    font-size:1.4rem;
+    margin-top:15px;
+    opacity:.9;
+}
+
+.typing{
+    color:#00d4ff;
+    border-right:3px solid #00d4ff;
+    white-space:nowrap;
+    overflow:hidden;
+    width:0;
+    animation:
+      typing 4s steps(40,end) forwards,
+      blink .7s infinite;
+}
+
+@keyframes typing{
+    to{width:100%}
+}
+
+@keyframes blink{
+    50%{border-color:transparent}
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.card{
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.1);
+    padding:30px;
+    border-radius:25px;
+    margin-bottom:25px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 30px rgba(0,212,255,.3);
+}
+
+h2{
+    color:#00d4ff;
+    margin-bottom:15px;
+}
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:10px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.stat{
+    text-align:center;
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,.05);
+}
+
+.stat h3{
+    color:#00d4ff;
+    font-size:2rem;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    opacity:.8;
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <h1 class="glow">ABHISHEK</h1>
+
+    <div style="max-width:700px;margin-top:20px;">
+        <p class="typing">
+            Electrical & Electronics Engineering Student | Reader | Learner | Cyclist
+        </p>
+    </div>
+</section>
+
+<div class="container">
+
+    <div class="stats">
+        <div class="stat">
+            <h3>18</h3>
+            <p>Years Old</p>
+        </div>
+
+        <div class="stat">
+            <h3>2nd</h3>
+            <p>Year Polytechnic</p>
+        </div>
+
+        <div class="stat">
+            <h3>B+</h3>
+            <p>Blood Group</p>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="card">
+        <h2>About Me</h2>
+        <p>
+            My name is Abhishek. I am an 18-year-old student pursuing
+            Electrical and Electronics Engineering (EEE) at SSM Polytechnic.
+            I am currently in my second year and enjoy learning new concepts,
+            improving my technical skills, and exploring technology.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>SSM Polytechnic</strong> – Electrical & Electronics Engineering (EEE), Second Year</li>
+            <li><strong>Edur HSS School</strong> – Plus One & Plus Two (Commerce)</li>
+            <li><strong>Edur HSS School</strong> – 10th Standard</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Hobbies & Interests</h2>
+        <ul>
+            <li>📚 Reading</li>
+            <li>📝 Studying</li>
+            <li>🚴 Cycling</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Personal Information</h2>
+        <ul>
+            <li>Name: Abhishek</li>
+            <li>Age: 18</li>
+            <li>Blood Group: B Positive (B+)</li>
+            <li>Department: Electrical & Electronics Engineering</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Career Objective</h2>
+        <p>
+            To build a successful career in Electrical and Electronics
+            Engineering by continuously developing technical knowledge,
+            practical skills, and problem-solving abilities while contributing
+            to innovative projects and technologies.
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Abhishek • Portfolio Website
+</footer>
+
+<script>
+for(let i=0;i<60;i++){
+    let p=document.createElement("div");
+    p.className="particle";
+    let size=Math.random()*5+2;
+
+    p.style.width=size+"px";
+    p.style.height=size+"px";
+    p.style.left=Math.random()*100+"vw";
+    p.style.animationDuration=(Math.random()*10+8)+"s";
+
+    document.body.appendChild(p);
+}
+</script>
+
+</body>
+</html>
